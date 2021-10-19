@@ -1,5 +1,6 @@
 # Todo App with JavaScript
 
+<a href="https://inveon-todo-app.netlify.app/">Live</a>
 
 # 📌 Installation
 
