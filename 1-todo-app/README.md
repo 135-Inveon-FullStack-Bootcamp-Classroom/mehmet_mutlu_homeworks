@@ -13,7 +13,7 @@
    npm install
    ```
 
-### Nuild
+### Build
    ```bash
    npm run build
    ```
