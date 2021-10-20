@@ -1,6 +1,6 @@
 # 💻 Todo App with JavaScript
 
-## <a href="https://inveon-todo-app.netlify.app/">Live</a>
+<h3><a href="https://inveon-todo-app.netlify.app/">Live</a></h3>
 
 # 📌 Installation
 
@@ -30,9 +30,3 @@
    <li><a href="https://webpack.js.org/">Webpack</a></li>
    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
 </ul>
-
-# 🎞 Screenshot
-
-![Proje Resmi](assets/screenshot1.png)
-![Proje Resmi](assets/screenshot2.png)
-![Proje Resmi](assets/screenshot3.png)
