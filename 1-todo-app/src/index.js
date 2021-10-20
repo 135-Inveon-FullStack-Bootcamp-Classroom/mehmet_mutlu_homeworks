@@ -69,7 +69,7 @@ class TodoApp {
     formDOM.addEventListener("submit", (event) => this.addTodoHandler(event));
   }
 
-  // Form submit for editting todo text
+  // Form submit for editing todo text
   submitTodoEditHandler() {
     const editFormDOM = document.getElementById("edit-form");
     editFormDOM.addEventListener("submit", (event) =>
@@ -77,7 +77,7 @@ class TodoApp {
     );
   }
 
-  // Editting todo text operatiıns
+  // Editing todo text operatiıns
   editTodoHandler(event) {
     event.preventDefault();
     const modalInputDOM = document.querySelector(".edit-input");
@@ -139,7 +139,7 @@ class TodoApp {
     }
   }
 
-  // Changing status, deleting and editting operations
+  // Changing status, deleting and editing operations
   operationHandler() {
     const ulDOM = document.querySelector(".todos-ul");
     ulDOM.addEventListener("click", (e) => {
