@@ -44,12 +44,13 @@ class TodoApp {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
+              <h5 class="modal-title">Edit Selected Todo</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <form id="edit-form">
                 <div>
-                  <input class="edit-input" placeholder="Edit todo..." ><button type="submit" class="edit-button" data-bs-dismiss="modal">Edit</button>
+                  <input class="edit-input" placeholder="Change todo's text..." ><button type="submit" class="edit-button" data-bs-dismiss="modal">Edit</button>
                 </div>
               </form>
             </div>
@@ -106,6 +107,7 @@ class TodoApp {
         completed: false,
       });
       this.saveToLocalStorage(this.todoList);
+      this.getTodos();
       inputDOM.value = "";
     }
   }
@@ -120,6 +122,7 @@ class TodoApp {
     const ulDOM = document.querySelector(".todos-ul");
     let todos = "";
     if (this.todoList.length > 0) {
+      todos = ""
       this.todoList.map(
         (todo) =>
           (todos += `<li id=${todo.id}><span class=${
@@ -130,6 +133,8 @@ class TodoApp {
       );
       ulDOM.innerHTML = todos;
     } else {
+      todos = ""
+      todos = `<p>You haven't added todo yet!</p>`
       ulDOM.innerHTML = todos;
     }
   }
