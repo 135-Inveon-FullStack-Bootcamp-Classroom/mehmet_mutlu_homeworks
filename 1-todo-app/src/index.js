@@ -4,12 +4,14 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class TodoApp {
+  // Constructor runs when app is started
   constructor() {
     this.todoList = [];
     this.editTodoId = "";
     this.initApp();
   }
 
+  // A function that holds other functions to run them when app is started
   initApp() {
     this.todoList = JSON.parse(localStorage.getItem("todos")) || [];
     document.body.appendChild(this.renderApp());
@@ -20,6 +22,7 @@ class TodoApp {
     this.submitTodoEditHandler();
   }
 
+  // Creates HTML structure
   renderApp() {
     const todoAppDOM = document.createElement("div");
 
@@ -59,11 +62,13 @@ class TodoApp {
     return todoAppDOM;
   }
 
+  // Form submit for adding new todo
   submitTodoHandler() {
     const formDOM = document.getElementById("todo-form");
     formDOM.addEventListener("submit", (event) => this.addTodoHandler(event));
   }
 
+  // Form submit for editting todo text
   submitTodoEditHandler() {
     const editFormDOM = document.getElementById("edit-form");
     editFormDOM.addEventListener("submit", (event) =>
@@ -71,6 +76,7 @@ class TodoApp {
     );
   }
 
+  // Editting todo text operatiıns
   editTodoHandler(event) {
     event.preventDefault();
     const modalInputDOM = document.querySelector(".edit-input");
@@ -83,6 +89,7 @@ class TodoApp {
     }
   }
 
+  // Adding new todo operations
   addTodoHandler(event) {
     event.preventDefault();
     const inputDOM = document.querySelector(".header-input");
@@ -102,11 +109,13 @@ class TodoApp {
       inputDOM.value = "";
     }
   }
-
+  
+  // Saving todos to localStorage
   saveToLocalStorage(todo) {
     localStorage.setItem("todos", JSON.stringify(todo));
   }
 
+  // Rendering todo list 
   getTodos() {
     const ulDOM = document.querySelector(".todos-ul");
     let todos = "";
@@ -125,11 +134,13 @@ class TodoApp {
     }
   }
 
+  // Changing status, deleting and editting operations
   operationHandler() {
     const ulDOM = document.querySelector(".todos-ul");
     ulDOM.addEventListener("click", (e) => {
       let target = e.target;
       if (target.tagName === "SPAN") {
+        // Change status of todo
         if (target.classList.contains("done")) {
           target.classList.remove("done");
           this.changeTodoHandler(target.parentNode.id);
@@ -139,30 +150,36 @@ class TodoApp {
         }
       } else if (target.tagName === "BUTTON") {
         if (target.classList.contains("close")) {
+          // Delete todo
           this.removeTodo(target.parentNode.parentNode.id);
         } else if (target.classList.contains("edit")) {
+          // Edit todo
           this.editTodoId = e.target.parentNode.parentNode.id;
         }
       }
     });
   }
 
+  // Change status of todo
   changeTodoHandler(id) {
     let todo = this.todoList[this.findTodoIndex(id)];
     todo.completed = !todo.completed;
     this.saveToLocalStorage(this.todoList);
   }
 
+  // Delete todo
   removeTodo(id) {
     this.todoList = this.todoList.filter((todo) => todo.id != id);
     this.saveToLocalStorage(this.todoList);
     this.getTodos();
   }
 
+  // Find index of todo with its id
   findTodoIndex(id) {
     return this.todoList.findIndex((todo) => todo.id === id);
   }
 
+  // Remove all completed todos with filter method
   removeCompletedTodos() {
     const removeButtonDOM = document.querySelector(".remove-completed");
     removeButtonDOM.addEventListener("click", () => {
