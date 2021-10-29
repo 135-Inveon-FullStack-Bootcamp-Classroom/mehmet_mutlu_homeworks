@@ -34,6 +34,3 @@
 
 # 🎞 Screenshot
 
-![Proje Resmi](/public/assets/screenshot1.png)
-![Proje Resmi](/public/assets/screenshot2.png)
-![Proje Resmi](/public/assets/screenshot3.png)
