@@ -1,4 +1,5 @@
 # 💻 Inveon FullStack Bootcamp Homeworks
 
-- [x] 01 - Todo App
-- [x] 02 - React Todo App
+- [x] Week 1 - Todo App
+- [x] Week 2 - React Todo App
+- [x] Week 3 - React Calculator App
