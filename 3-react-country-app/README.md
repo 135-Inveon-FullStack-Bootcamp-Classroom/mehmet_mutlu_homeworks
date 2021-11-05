@@ -2,8 +2,7 @@
 
 I have coded this app as a homework for third week to show my learning outcomes about API calls.
 
-<h2><a href="https://react-country-app-mhmtmtlu.netlify.app/">Live Preview</a></h2>
-<h2><a href="https://restcountries.com/">API Link</a></h2>
+<h3><a href="https://react-country-app-mhmtmtlu.netlify.app/">Live Preview</a></h3>
 
 # 🧰 Toolbox
 
@@ -12,7 +11,7 @@ I have coded this app as a homework for third week to show my learning outcomes 
    <li><a href="https://styled-components.com/docs">Styled Components</a></li>
    <li><a href="https://www.framer.com/docs/">Framer Motion</a></li>
    <li><a href="https://www.npmjs.com/package/axios">Axios</a></li>
-   <li><a href="https://restcountries.eu/rest/v2/all">Rest Countries API</a></li>
+   <li><a href="https://restcountries.com/">Rest Countries API</a></li>
 </ul>
 
 # 🎞 Screenshot
