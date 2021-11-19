@@ -1,0 +1,13 @@
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\bin\Debug\netcoreapp3.1\4-CSharpCarTypes.exe
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\bin\Debug\netcoreapp3.1\4-CSharpCarTypes.deps.json
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\bin\Debug\netcoreapp3.1\4-CSharpCarTypes.runtimeconfig.json
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\bin\Debug\netcoreapp3.1\4-CSharpCarTypes.runtimeconfig.dev.json
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\bin\Debug\netcoreapp3.1\4-CSharpCarTypes.dll
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\bin\Debug\netcoreapp3.1\4-CSharpCarTypes.pdb
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\obj\Debug\netcoreapp3.1\4-CSharpCarTypes.csproj.AssemblyReference.cache
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\obj\Debug\netcoreapp3.1\4-CSharpCarTypes.AssemblyInfoInputs.cache
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\obj\Debug\netcoreapp3.1\4-CSharpCarTypes.AssemblyInfo.cs
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\obj\Debug\netcoreapp3.1\4-CSharpCarTypes.csproj.CoreCompileInputs.cache
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\obj\Debug\netcoreapp3.1\4-CSharpCarTypes.dll
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\obj\Debug\netcoreapp3.1\4-CSharpCarTypes.pdb
+C:\Users\Public\patika\InveonBootcamp\4-CSharpCarTypes\4-CSharpCarTypes\obj\Debug\netcoreapp3.1\4-CSharpCarTypes.genruntimeconfig.cache
