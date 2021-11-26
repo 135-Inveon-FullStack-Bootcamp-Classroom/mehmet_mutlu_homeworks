@@ -1,3 +1,4 @@
+using _6_CSharpIMDbProject.DBOperations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -16,9 +17,11 @@ namespace _6_CSharpIMDbProject
 {
     public class Startup
     {
+        public string ConnectionString { get; set; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            ConnectionString = Configuration.GetConnectionString("DefaultConnectionString");
         }
 
         public IConfiguration Configuration { get; }
@@ -26,6 +29,7 @@ namespace _6_CSharpIMDbProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<IMDbDBContext>(options => options.UseSqlServer(ConnectionString));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
