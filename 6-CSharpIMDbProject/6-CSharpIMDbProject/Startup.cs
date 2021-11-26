@@ -59,6 +59,8 @@ namespace _6_CSharpIMDbProject
             {
                 endpoints.MapControllers();
             });
+
+            IMDbDBInitializer.Seed(app);
         }
     }
 }
