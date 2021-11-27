@@ -1,3 +1,4 @@
+using _6_CSharpIMDbProject.Data.Services;
 using _6_CSharpIMDbProject.DBOperations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,7 +31,11 @@ namespace _6_CSharpIMDbProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Configure DBContext with SQL
             services.AddDbContext<IMDbDBContext>(options => options.UseSqlServer(ConnectionString));
+
+            // Configure the Services
+            services.AddTransient<ActorService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
