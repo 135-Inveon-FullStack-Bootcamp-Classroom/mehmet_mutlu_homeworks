@@ -41,5 +41,19 @@ namespace _6_CSharpIMDbProject.Controllers
             _actorService.AddActor(actor);
             return Ok();
         }
+
+        [HttpPut("update-actor-by-id/{id}")]
+        public IActionResult UpdateActorByID(int id, [FromBody]ActorVM actor)
+        {
+            var updatedActor = _actorService.UpdateActorByID(id, actor);
+            return Ok(updatedActor);
+        }
+
+        [HttpDelete("delete-actor-by-id/{id}")]
+        public IActionResult DeleteActorByID(int id)
+        {
+            _actorService.DeleteActorByID(id);
+            return Ok();
+        }
     }
 }
