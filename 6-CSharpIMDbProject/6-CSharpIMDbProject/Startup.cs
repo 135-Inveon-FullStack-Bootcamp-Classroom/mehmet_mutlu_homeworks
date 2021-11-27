@@ -36,6 +36,7 @@ namespace _6_CSharpIMDbProject
 
             // Configure the Services
             services.AddTransient<ActorService>();
+            services.AddTransient<MovieService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
