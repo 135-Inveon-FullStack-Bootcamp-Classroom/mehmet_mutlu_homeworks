@@ -7,3 +7,4 @@
 - [x] Week 4 - Redux Memory Game
 - [x] Week 5 - C# Inheritance and Implementation Example
 - [x] Week 6 - C# IMDb WebAPI Example
+- [ ] Week 7 - C# Football Manager WebAPI
