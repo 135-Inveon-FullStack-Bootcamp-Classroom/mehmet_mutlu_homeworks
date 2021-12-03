@@ -34,7 +34,7 @@ namespace FootballManagerApi.ServiceImplementations
         {
             if (id != footballer.Id)
             {
-                throw new Exception("Idler Uyuşmadı");
+                throw new Exception("Idler uyuşmamaktadır!");
             }
             _context.Entry(footballer).State = EntityState.Modified;
 
@@ -46,7 +46,7 @@ namespace FootballManagerApi.ServiceImplementations
             {
                 if (!FootballerExists(id))
                 {
-                    throw new Exception($"Id'si '{id}' olan Futbolcu bulunamadı");
+                    throw new Exception($"Id'si '{id}' olan bir Futbolcu bulunmamaktadır!");
                 }
                 else
                 {
@@ -69,7 +69,7 @@ namespace FootballManagerApi.ServiceImplementations
 
             if (footballer == null)
             {
-                throw new Exception("Futbolcu Bulunamadı");
+                throw new Exception("Futbolcu bulunamadı!");
             }
 
             _context.Footballers.Remove(footballer);

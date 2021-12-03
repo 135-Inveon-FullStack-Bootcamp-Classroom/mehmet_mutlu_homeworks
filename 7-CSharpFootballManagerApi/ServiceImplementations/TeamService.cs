@@ -56,7 +56,7 @@ namespace FootballManagerApi.ServiceImplementations
         {
             if (id != team.Id)
             {
-                throw new Exception("Idler Uyuşmadı");
+                throw new Exception("Idler uyuşmamaktadır!");
             }
             _context.Entry(team).State = EntityState.Modified;
 
@@ -68,7 +68,7 @@ namespace FootballManagerApi.ServiceImplementations
             {
                 if (!TeamExists(id))
                 {
-                    throw new Exception($"Id'si '{id}' olan takım bulunamadı");
+                    throw new Exception($"Id'si '{id}' olan bir Takım bulunmamaktadır!");
                 }
                 else
                 {
@@ -91,7 +91,7 @@ namespace FootballManagerApi.ServiceImplementations
 
             if (team == null)
             {
-                throw new Exception("Takım Bulunamadı");
+                throw new Exception("Takım bulunamadı!");
             }
 
             _context.Teams.Remove(team);

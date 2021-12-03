@@ -1,5 +1,6 @@
 ﻿using FootballManagerApi.Entities;
 using FootballManagerApi.ServiceAbstracts;
+using FootballManagerApi.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -10,25 +11,25 @@ namespace FootballManagerApi.Controllers
     [ApiController]
     public class FootballersController : ControllerBase
     {
-        private readonly IFootballerService _footballerService;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public FootballersController(IFootballerService footballerService)
+        public FootballersController(IUnitOfWork unitOfWork)
         {
-            _footballerService = footballerService;
+            _unitOfWork = unitOfWork;
         }
 
         // GET: api/Footballers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Footballer>>> GetFootballers()
         {
-            var footballer = await _footballerService.GetAllAsync();
+            var footballer = await _unitOfWork.FootballerService.GetAllAsync();
             return Ok(footballer);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Footballer>> GetFootballer(int id)
         {
-            var footballer = await _footballerService.GetAsync(id);
+            var footballer = await _unitOfWork.FootballerService.GetAsync(id);
             return Ok(footballer);
         }
 
@@ -37,7 +38,7 @@ namespace FootballManagerApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFootballer(int id, Footballer footballer)
         {
-            await _footballerService.UpdateAsync(id, footballer);
+            await _unitOfWork.FootballerService.UpdateAsync(id, footballer);
             return NoContent();
         }
 
@@ -46,7 +47,7 @@ namespace FootballManagerApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Footballer>> PostFootballer(Footballer footballer)
         {
-            var createdFootballer = await _footballerService.CreateAsync(footballer);
+            var createdFootballer = await _unitOfWork.FootballerService.CreateAsync(footballer);
             return Ok(createdFootballer);
         }
 
@@ -54,7 +55,7 @@ namespace FootballManagerApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFootballer(int id)
         {
-            await _footballerService.DeleteAsync(id);
+            await _unitOfWork.FootballerService.DeleteAsync(id);
             return NoContent();
         }
     }
